@@ -1,0 +1,145 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f6f8;
+  color: #222;
+}
+
+/* Header */
+.site-header {
+  text-align: center;
+  background: linear-gradient(90deg, #0d47a1, #1976d2);
+  color: #fff;
+  padding: 30px 15px;
+}
+
+/* Navigation - Flexbox */
+.main-nav {
+  background: #263238;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main-nav li {
+  margin: 10px 15px;
+}
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.main-nav a:hover {
+  color: #ff9800;
+}
+
+/* Main Layout - Grid */
+.site-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Content area */
+.content h2 {
+  margin-bottom: 10px;
+  color: #0d47a1;
+}
+
+/* Car Cards - Flexbox */
+.car-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.card {
+  background: #fff;
+  border-radius: 10px;
+  flex: 1 1 300px;
+  padding: 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card h3 {
+  margin: 10px 0;
+  color: #1976d2;
+}
+.card p {
+  color: #444;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.sidebar h2 {
+  margin-bottom: 15px;
+  color: #0d47a1;
+}
+.sidebar ul {
+  list-style: disc inside;
+  color: #444;
+}
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  background: #263238;
+  color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .site-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+  .car-cards {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-grid {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    flex: 1 1 100%;
+  }
+}
